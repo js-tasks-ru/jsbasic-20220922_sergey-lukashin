@@ -1,20 +1,9 @@
 function getMinMax(str) {
+  let arr = str.split(" ").filter((item) => +item);
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
   let resObj = {
-    min: null,
-    max: null
+    max, min
   };
-  let numArr = str.split(' ').filter(item => (!Number.isNaN(parseFloat(item)))).map(number => parseFloat(number));
-  let minValue = numArr[0];
-  let maxValue = numArr[0];
-  for (let i = 0; i < numArr.length; i++) {
-    if (minValue > numArr[i]) {
-      minValue = numArr[i];
-    }
-    if (maxValue < numArr[i]) {
-      maxValue = numArr[i];
-    }
-  }
-  resObj.min = minValue;
-  resObj.max = maxValue;
   return resObj;
 }
