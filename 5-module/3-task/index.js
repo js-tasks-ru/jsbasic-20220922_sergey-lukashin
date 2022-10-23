@@ -2,8 +2,8 @@ function initCarousel() {
   const carouselInner = document.querySelector('.carousel__inner');
   const arrowRight = document.querySelector('.carousel__arrow_right');
   const arrowLeft = document.querySelector('.carousel__arrow_left');
-  const slidesCount = carouselInner.children.length;
   const slideWidth = document.querySelector('.carousel__slide').offsetWidth;
+  const slidesCount = carouselInner.children.length;
   let position = 0;
 
   arrowRight.addEventListener('click', () => {
